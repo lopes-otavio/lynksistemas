@@ -1,0 +1,120 @@
+.marketing-section {
+	background-color: var(--bg-main);
+}
+
+.marketing-header {
+	text-align: center;
+	margin-bottom: 60px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section-badge {
+	display: inline-block;
+	background-color: rgba(5, 86, 242, 0.1);
+	color: var(--primary-blue);
+	padding: 6px 16px;
+	border-radius: var(--radius-full);
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.marketing-header h2 {
+	margin-bottom: 16px;
+}
+
+.marketing-header p {
+	color: var(--text-muted);
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+.marketing-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 32px;
+}
+
+.platform-card {
+	background-color: var(--bg-secondary);
+	padding: 40px 32px;
+	border-radius: var(--radius-lg);
+	transition: all var(--transition-normal);
+	border: 1px solid transparent;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.platform-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 16px 32px rgba(19, 39, 77, 0.06);
+	background-color: var(--bg-main);
+	border-color: rgba(19, 39, 77, 0.08);
+
+	.platform-icon {
+		transform: scale(1.1);
+	}
+}
+
+.platform-icon {
+	width: 64px;
+	height: 64px;
+	border-radius: var(--radius-md);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 24px;
+	transition: transform var(--transition-normal);
+}
+
+/* Brand specific colors for icons */
+.icon-google {
+	background-color: rgba(234, 67, 53, 0.1);
+	color: #ea4335;
+}
+
+.icon-meta {
+	background-color: rgba(6, 104, 225, 0.1);
+	color: #0668e1;
+}
+
+.icon-linkedin {
+	background-color: rgba(10, 102, 194, 0.1);
+	color: #0a66c2;
+}
+
+.icon-tiktok {
+	background-color: rgba(0, 0, 0, 0.05);
+	color: #000000;
+}
+
+.platform-card h3 {
+	font-size: 1.25rem;
+	margin-bottom: 12px;
+	color: var(--dark-navy);
+}
+
+.platform-card p {
+	color: var(--text-muted);
+	margin-bottom: 24px;
+	flex-grow: 1;
+}
+
+.platform-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: var(--primary-blue);
+	font-weight: 600;
+	transition: gap var(--transition-fast);
+	margin-top: auto;
+}
+
+.platform-card:hover .platform-link {
+	gap: 12px;
+}

@@ -1,0 +1,133 @@
+.about-page {
+	background-color: var(--bg-main);
+	overflow-x: hidden;
+}
+
+.logo-animation-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 250px;
+	margin-bottom: 2rem;
+
+	.animated-logo {
+		max-width: 150px;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.about-header {
+	h2 {
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		color: var(--dark-navy);
+		line-height: 1.2;
+	}
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	margin-top: 40px;
+
+	@media (max-width: 992px) {
+		grid-template-columns: 1fr;
+	}
+
+	.feature-card {
+		background-color: var(--bg-secondary);
+		padding: 40px;
+		border-radius: var(--radius-lg);
+		border: 1px solid rgba(19, 39, 77, 0.03);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(19, 39, 77, 0.08);
+		}
+
+		.feature-icon {
+			color: var(--primary-blue);
+			margin-bottom: 24px;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			color: var(--dark-navy);
+			margin-bottom: 16px;
+		}
+
+		p {
+			color: var(--text-muted);
+			line-height: 1.6;
+			font-size: 1.05rem;
+		}
+	}
+}
+
+.text-highlight {
+	color: var(--primary-blue);
+}
+
+/* Horizontal Scroll Styles */
+.horizontal-container {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.horizontal-wrapper {
+	display: flex;
+	width: 300vw;
+}
+
+.horizontal-panel {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	flex-shrink: 0;
+
+	h2 {
+		font-size: clamp(3rem, 8vw, 6rem);
+		line-height: 1;
+	}
+}
+
+.panel-1 {
+	background-color: var(--dark-navy);
+	color: #ffffff;
+}
+
+.panel-2 {
+	background-color: var(--primary-blue);
+	color: #ffffff;
+
+	.text-highlight {
+		color: var(--bg-main);
+	}
+}
+
+.panel-3 {
+	background-color: var(--bg-secondary);
+	color: var(--dark-navy);
+}
+
+.about-content {
+	background-color: var(--bg-main);
+
+	.text-large {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		line-height: 1.4;
+		color: var(--dark-navy);
+		font-weight: 700;
+	}
+}

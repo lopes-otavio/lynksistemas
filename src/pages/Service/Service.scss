@@ -1,0 +1,156 @@
+.service-page {
+	background-color: var(--bg-main);
+
+	.service-hero {
+		padding: 120px 0;
+		background: linear-gradient(
+			to bottom,
+			var(--bg-secondary) 0%,
+			var(--bg-main) 100%
+		);
+
+		.hero-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+
+			@media (max-width: 992px) {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.hero-content {
+			.badge {
+				display: none;
+			}
+
+			h1 {
+				font-size: clamp(3rem, 5vw, 4rem);
+				color: var(--dark-navy);
+				line-height: 1.1;
+				margin-bottom: 24px;
+			}
+
+			.subtitle {
+				font-size: clamp(1.25rem, 3vw, 1.5rem);
+				color: var(--primary-blue);
+				font-weight: 500;
+				margin-bottom: 20px;
+			}
+
+			.description {
+				font-size: 1.125rem;
+				color: var(--text-muted);
+				line-height: 1.6;
+				margin-bottom: 40px;
+			}
+
+			.cta-group {
+				display: flex;
+				gap: 16px;
+			}
+		}
+
+		.hero-image {
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: var(--radius-lg);
+				box-shadow: 0 20px 60px rgba(19, 39, 77, 0.08);
+				object-fit: cover;
+			}
+		}
+	}
+
+	.service-benefits {
+		text-align: center;
+
+		.benefits-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 30px;
+			margin-top: 40px;
+
+			.benefit-card {
+				background-color: var(--bg-main);
+				padding: 40px;
+				border-radius: var(--radius-lg);
+				box-shadow: 0 10px 40px rgba(19, 39, 77, 0.05);
+				transition: transform 0.3s ease;
+				text-align: center;
+
+				&:hover {
+					transform: translateY(-5px);
+				}
+
+				.icon-wrapper {
+					width: 60px;
+					height: 60px;
+					border-radius: 16px;
+					background-color: rgba(5, 86, 242, 0.05);
+					color: var(--primary-blue);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0 auto 24px auto;
+				}
+
+				h3 {
+					font-size: 1.5rem;
+					color: var(--dark-navy);
+					margin-bottom: 16px;
+				}
+
+				p {
+					color: var(--text-muted);
+					line-height: 1.6;
+				}
+			}
+		}
+	}
+
+	.service-tech {
+		text-align: center;
+
+		.tech-logos-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 40px 60px;
+			max-width: 900px;
+			margin: 0 auto;
+
+			.tech-logo-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 16px;
+				color: var(--dark-navy);
+				transition: all var(--transition-normal);
+
+				.icon-box {
+					transition: transform var(--transition-normal);
+				}
+
+				span {
+					font-size: 1rem;
+					font-weight: 600;
+					opacity: 0;
+					transform: translateY(10px);
+					transition: all var(--transition-normal);
+				}
+
+				&:hover {
+					.icon-box {
+						transform: translateY(-10px);
+					}
+					span {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+}

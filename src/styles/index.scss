@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+	/* Colors */
+	--primary-blue: #0556f2; /* Bright Blue */
+	--primary-blue-hover: #0445c7;
+
+	--dark-navy: #13274d; /* Navy Blue */
+	--dark-navy-hover: #0c1a35;
+
+	--text-muted: #706f7e; /* Cool Gray */
+	--text-light: #ffffff;
+	--text-dark: #13274d;
+
+	--bg-main: #ffffff;
+	--bg-secondary: #f8fafc; /* Very Light Gray */
+	--bg-dark: #13274d;
+
+	/* Borders and UI */
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-lg: 16px;
+	--radius-full: 9999px;
+
+	/* Transitions */
+	--transition-fast: 0.2s ease-in-out;
+	--transition-normal: 0.3s ease-in-out;
+	--transition-slow: 0.5s ease-in-out;
+
+	/* Layout */
+	--max-width: 1400px;
+	--spacing-section: 80px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter Tight", sans-serif;
+	background-color: var(--bg-main);
+	color: var(--text-dark);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Base Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--dark-navy);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.5rem;
+	letter-spacing: -0.02em;
+}
+h2 {
+	font-size: 2.5rem;
+	letter-spacing: -0.01em;
+}
+h3 {
+	font-size: 1.75rem;
+}
+
+/* Utility Classes */
+.container {
+	width: 100%;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+.section-padding {
+	padding: var(--spacing-section) 0;
+}
+
+/* Buttons */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 12px 24px;
+	border-radius: var(--radius-md);
+	font-weight: 600;
+	cursor: pointer;
+	transition: all var(--transition-fast);
+	border: none;
+	font-size: 1rem;
+}
+
+.btn-primary {
+	background-color: var(--primary-blue);
+	color: var(--text-light);
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-blue-hover);
+	transform: translateY(-2px);
+}
+
+.btn-secondary {
+	background-color: var(--dark-navy);
+	color: var(--text-light);
+}
+
+.btn-secondary:hover {
+	background-color: var(--dark-navy-hover);
+	transform: translateY(-2px);
+}
+
+.btn-outline {
+	background-color: transparent;
+	border: 2px solid var(--primary-blue);
+	color: var(--primary-blue);
+}
+
+.btn-outline:hover {
+	background-color: var(--primary-blue);
+	color: var(--text-light);
+}
+
+/* Animations */
+@keyframes slideUpFade {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.animate-on-scroll {
+	opacity: 0; /* Hidden by default until JS triggers */
+}
+
+.animate-on-scroll.visible {
+	animation: slideUpFade var(--transition-slow) forwards;
+}
+
+/* Home Page Parallax Effect */
+.home-page {
+	> section:not(.hero-section) {
+		position: relative;
+		z-index: 10;
+		background-color: var(--bg-main);
+	}
+}
