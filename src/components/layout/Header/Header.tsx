@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoLynkAzul from "../../../assets/logo-lynk-azul.svg";
 import {
 	MessageCircle,
 	ChevronDown,
@@ -78,11 +79,7 @@ const Header = () => {
 			<div className="container header-inner">
 				<div className="logo">
 					<Link to="/">
-						<img
-							src="/src/assets/logo-lynk-azul.svg"
-							alt="Lynk Sistemas Logo"
-							height="40"
-						/>
+						<img src={logoLynkAzul} alt="Lynk Sistemas Logo" height="40" />
 					</Link>
 				</div>
 
@@ -104,11 +101,7 @@ const Header = () => {
 				<div className={`nav-wrapper ${isMobileMenuOpen ? "mobile-open" : ""}`}>
 					<div className="mobile-sidebar-header">
 						<Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-							<img
-								src="/src/assets/logo-lynk-azul.svg"
-								alt="Lynk Sistemas Logo"
-								height="32"
-							/>
+							<img src={logoLynkAzul} alt="Lynk Sistemas Logo" height="32" />
 						</Link>
 						<button
 							className="mobile-menu-toggle open"

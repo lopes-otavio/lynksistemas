@@ -211,10 +211,7 @@
 	}
 
 	.hero-stats {
-		flex-direction: column;
-		gap: 16px;
-		padding: 24px;
-		width: 100%;
+		display: none;
 	}
 
 	.stat-divider {

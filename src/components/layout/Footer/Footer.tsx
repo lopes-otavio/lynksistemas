@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Facebook, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoLynkBranca from "../../../assets/logo-lynk-branca.svg";
 import "./Footer.scss";
 
 const socialLinks = [
@@ -45,7 +46,7 @@ const Footer = () => {
 				<div className="footer-top">
 					<div className="footer-brand">
 						<img
-							src="/src/assets/logo-lynk-branca.svg"
+							src={logoLynkBranca}
 							alt="Lynk Sistemas"
 							className="footer-logo"
 						/>
