@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FaGoogle, FaMeta, FaLinkedin, FaTiktok } from "react-icons/fa6";
 import { ArrowRight } from "lucide-react";
 import "./Marketing.scss";

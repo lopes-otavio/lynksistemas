@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FaWordpress, FaReact, FaNodeJs, FaAws } from "react-icons/fa6";
 import { SiNextdotjs, SiTypescript } from "react-icons/si";
 import "./PlatformPartners.scss";
