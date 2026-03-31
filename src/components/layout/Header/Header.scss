@@ -162,8 +162,18 @@
 	visibility: visible;
 }
 
+@media (min-width: 992px) {
+	.mobile-only-nav {
+		display: none !important;
+	}
+}
+
 /* Mobile Styles */
 @media (max-width: 991px) {
+	.desktop {
+		display: none !important;
+	}
+
 	.mobile-menu-toggle {
 		display: flex;
 		align-items: center;
